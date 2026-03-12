@@ -21,7 +21,8 @@ COPY packages/adapters/openclaw-gateway/package.json packages/adapters/openclaw-
 COPY packages/adapters/opencode-local/package.json packages/adapters/opencode-local/
 COPY packages/adapters/pi-local/package.json packages/adapters/pi-local/
 
-RUN pnpm install --frozen-lockfile
+# Ensure devDependencies are installed for build (TypeScript, etc.)
+RUN pnpm install --frozen-lockfile --dev
 
 FROM base AS build
 WORKDIR /app
