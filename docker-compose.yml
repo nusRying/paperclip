@@ -25,8 +25,8 @@ services:
       SERVE_UI: "true"
       PAPERCLIP_DEPLOYMENT_MODE: "authenticated"
       PAPERCLIP_DEPLOYMENT_EXPOSURE: "private"
-      PAPERCLIP_PUBLIC_URL: "${PAPERCLIP_PUBLIC_URL:-http://localhost:3000}"
-      BETTER_AUTH_SECRET: "${BETTER_AUTH_SECRET:?BETTER_AUTH_SECRET must be set}"
+      PAPERCLIP_PUBLIC_URL: "https://agent.kutraa.com"
+      BETTER_AUTH_SECRET: "rBbiUrUOpFCEJeZgkHqD979t72XdkReKuUzp1ZWSkl8="
     volumes:
       - paperclip-data:/paperclip
     depends_on:
